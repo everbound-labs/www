@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Everbound Labs</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin: 0;
+        background-color: #fafafa;
+        color: #111;
+        line-height: 1.6;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .image {
+        flex: 1 1 400px;
+        min-width: 300px;
+      }
+
+      .image img {
+        width: 100%;
+        height: auto;
+        filter: grayscale(100%);
+        border-radius: 4px;
+      }
+
+      .text {
+        flex: 1 1 400px;
+        min-width: 300px;
+        padding: 20px 40px;
+      }
+
+      h2 {
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      h2::after {
+        content: "";
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(90deg, #00b5ad, #00d4d4);
+        margin-top: 6px;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+
+      a {
+        color: #007b8f;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          text-align: center;
+        }
+        .text {
+          padding: 20px;
+        }
+        h2::after {
+          margin: 10px auto 0 auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        <img src="assets/img/skyline-nyc.jpg" alt="New York City skyline" />
+      </div>
+      <div class="text">
+        <h2>About Us</h2>
+        <p>
+          <strong>Everbound Labs</strong> is a creative studio focused on
+          building thoughtful, beautifully crafted games and interactive
+          experiences.
+        </p>
+        <p>
+          Founded in 2025 and based in New York City, we love creating worlds
+          that feel alive and memorable, blending together design, challenge, and emotion.
+        </p>
+        <p>
+          Our flagship title, <strong>Bunny Bound</strong>, is a
+          precision-movement puzzle adventure about a small bunny finding a path
+          through intricate worlds, one careful hop at a time.
+        </p>
+        <p>
+          At Everbound Labs, we build with patience and intention, aiming to
+          create experiences that feel personal and worth returning to.
+        </p>
+        <p>
+          <strong>Contact:</strong>
+          <a href="mailto:everboundlabs@gmail.com">everboundlabs@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
