@@ -20,28 +20,38 @@
         padding: 60px 20px;
       }
 
+      .hero {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .app-icon {
+        width: 128px;
+        height: 128px;
+        border-radius: 22%;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        margin-bottom: 20px;
+      }
+
       h1 {
         text-transform: uppercase;
         font-size: 24px;
         letter-spacing: 1px;
-        margin-bottom: 10px;
-        position: relative;
+        margin-bottom: 6px;
       }
 
-      h1::after {
-        content: "";
-        display: block;
-        width: 40px;
-        height: 3px;
-        background: linear-gradient(90deg, #00b5ad, #00d4d4);
-        margin-top: 6px;
+      .subtitle {
+        font-size: 16px;
+        font-weight: 500;
+        color: #555;
+        margin: 0 0 16px 0;
       }
 
-      .tagline {
+      .promo {
         font-size: 18px;
         font-weight: 500;
-        margin-bottom: 20px;
         color: #333;
+        margin: 0;
       }
 
       h2 {
@@ -62,13 +72,6 @@
         margin-top: 6px;
       }
 
-      h3 {
-        font-size: 15px;
-        font-weight: 600;
-        margin-top: 20px;
-        margin-bottom: 8px;
-      }
-
       p {
         margin: 0 0 15px 0;
       }
@@ -82,9 +85,85 @@
         text-decoration: underline;
       }
 
-      .cta {
-        font-weight: 600;
+      /* Screenshot carousel */
+      .screenshots {
+        margin: 32px -20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+        gap: 12px;
+        padding: 0 20px 16px;
+        scrollbar-width: none;
+      }
+
+      .screenshots::-webkit-scrollbar {
+        display: none;
+      }
+
+      .screenshots img {
+        flex: 0 0 auto;
+        width: 220px;
+        border-radius: 12px;
+        scroll-snap-align: start;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .carousel-nav {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .carousel-nav button {
+        width: 36px;
+        height: 36px;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .carousel-nav button:hover {
+        border-color: #00b5ad;
+        color: #00b5ad;
+      }
+
+      @media (max-width: 768px) {
+        .carousel-nav {
+          display: none;
+        }
+      }
+
+      /* Features list */
+      .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 15px 0;
+      }
+
+      .features-list li {
+        padding: 4px 0;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .features-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #00b5ad;
+      }
+
+      .fans {
         font-style: italic;
+        color: #555;
+      }
+
+      .coming-soon {
+        font-weight: 600;
         margin-top: 30px;
       }
 
@@ -112,78 +191,71 @@
   </head>
   <body>
     <div class="container">
-      <h1>Bunny Bound</h1>
-      <p class="tagline">Time Your Hop. Master the Grid.</p>
-      <p>
-        A deceptively simple puzzle game where split-second timing meets
-        strategic planning. Guide your bunny through timed traps to collect
-        carrots and climb the global leaderboard.
-      </p>
+      <div class="hero">
+        <img
+          class="app-icon"
+          src="assets/img/app-icon-512.png"
+          alt="Bunny Bound app icon"
+        />
+        <h1>Bunny Bound</h1>
+        <p class="subtitle">Timing-Based Action Puzzle</p>
+        <p class="promo">
+          Precision puzzle adventure. Time your moves, dodge hazards, reach the
+          carrot!
+        </p>
+      </div>
 
-      <p><strong>Coming soon to iOS and Android</strong></p>
+      <div class="screenshots">
+        <img
+          src="assets/img/bunnybound-tutorial-tablet.png"
+          alt="Bunny Bound tutorial gameplay"
+        />
+        <img
+          src="assets/img/bunnybound-action-tablet-compressed.png"
+          alt="Bunny Bound action gameplay"
+        />
+        <img
+          src="assets/img/bunnybound-worldmap-tablet.png"
+          alt="Bunny Bound world map"
+        />
+        <img
+          src="assets/img/bunnybound-leaderboard-tablet.png"
+          alt="Bunny Bound leaderboard"
+        />
+      </div>
+      <div class="carousel-nav">
+        <button id="prev">&lsaquo;</button>
+        <button id="next">&rsaquo;</button>
+      </div>
 
       <h2>About the Game</h2>
       <p>
-        Bunny Bound is a timing-based puzzle game that's easy to pick up but
-        tricky to master. Swipe to move your bunny across a grid of tiles, but
-        watch out: traps appear and disappear on precise rhythms. Learn the
-        patterns, time your hops perfectly, and race against the clock to earn 3
-        stars.
+        Bunny Bound is a puzzle game where you guide a bunny through
+        obstacle-filled worlds. Time your moves, dodge hazards, and race to the
+        finish as fast as you can.
       </p>
-
-      <h2>How to Play</h2>
-
-      <h3>Swipe to Hop</h3>
       <p>
-        Simple swipe controls let you move your bunny up, down, left, or
-        right, one tile at a time.
-      </p>
-
-      <h3>Avoid the Traps</h3>
-      <p>
-        Traps activate on set intervals. Study the rhythm, find your
-        opening, and hop through safely.
-      </p>
-
-      <h3>Beat the Clock</h3>
-      <p>
-        Every level has time thresholds for 1, 2, and 3 stars. Can you perfect
-        them all without losing a life?
+        Challenge yourself to find the fastest route, then prove it on global
+        leaderboards. Watch replays from top players to learn new strategies and
+        shave off precious seconds.
       </p>
 
       <h2>Features</h2>
+      <ul class="features-list">
+        <li>Precision movement through handcrafted worlds and levels</li>
+        <li>Global leaderboards: compete for the fastest time</li>
+        <li>Watch and learn from the best players' runs</li>
+        <li>Play offline, sync when you're back online</li>
+        <li>New worlds added regularly</li>
+      </ul>
 
-      <h3>Timed Obstacle Courses</h3>
-      <p>
-        Traps pulse on and off in rhythmic patterns. Master the timing to
-        navigate through increasingly complex obstacle courses.
+      <p class="fans">
+        For fans of timing and skill games like Geometry Dash, Crossy Road, or
+        Super Hexagon, but where reading the pattern is just as important as
+        the reflexes.
       </p>
 
-      <h3>Multiple Worlds</h3>
-      <p>
-        Journey through a variety of themed worlds, each with unique challenges
-        and increasingly devious trap patterns.
-      </p>
-
-      <h3>Global Leaderboards</h3>
-      <p>
-        Compete against players worldwide. Your fastest completion times are
-        ranked globally. Can you reach the top 10?
-      </p>
-
-      <h3>Star Rating System</h3>
-      <p>
-        Every level has 3-star objectives. Perfect your runs to collect them all
-        and prove your mastery.
-      </p>
-
-      <h2>The Challenge Awaits</h2>
-      <p>
-        What starts as simple hop-and-collect puzzles quickly evolves into
-        intricate timing challenges. Synchronized traps, narrow windows, and
-        demanding time thresholds will test your reflexes and your patience.
-      </p>
-      <p class="cta">Are you ready to hop to it?</p>
+      <p class="coming-soon">Coming soon to iOS and Android</p>
 
       <div class="footer-links">
         <p>
@@ -199,5 +271,12 @@
         <a href="/">&larr; Everbound Labs</a>
       </p>
     </div>
+    <script>
+      const track = document.querySelector(".screenshots");
+      document.getElementById("prev").onclick = () =>
+        track.scrollBy({ left: -232, behavior: "smooth" });
+      document.getElementById("next").onclick = () =>
+        track.scrollBy({ left: 232, behavior: "smooth" });
+    </script>
   </body>
 </html>
