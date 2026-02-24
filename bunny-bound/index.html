@@ -162,9 +162,47 @@
         color: #555;
       }
 
-      .coming-soon {
-        font-weight: 600;
+      .store-badges {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 12px;
         margin-top: 30px;
+      }
+
+      .store-badges a img {
+        height: 40px;
+      }
+
+      .store-badges a.play-store {
+        height: 40px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+      }
+
+      .store-badges a.play-store img {
+        height: 59px;
+        margin: 0 -8px;
+      }
+
+      .store-badge-coming-soon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0.35;
+        cursor: default;
+      }
+
+      .store-badge-coming-soon img {
+        height: 40px;
+      }
+
+      .store-badge-coming-soon span {
+        font-size: 11px;
+        color: #555;
+        margin-top: 2px;
+        letter-spacing: 0.5px;
       }
 
       .footer-links {
@@ -203,6 +241,24 @@
           Precision puzzle adventure. Time your moves, dodge hazards, reach the
           carrot!
         </p>
+        <div class="store-badges">
+          <div class="store-badge-coming-soon">
+            <img
+              src="assets/img/app-store-badge.svg"
+              alt="Download on the App Store"
+            />
+            <span>Coming Soon</span>
+          </div>
+          <a
+            class="play-store"
+            href="https://play.google.com/store/apps/details?id=com.everboundlabs.bunnybound"
+          >
+            <img
+              src="assets/img/google-play-badge.png"
+              alt="Get it on Google Play"
+            />
+          </a>
+        </div>
       </div>
 
       <div class="screenshots">
@@ -254,8 +310,6 @@
         Super Hexagon, but where reading the pattern is just as important as
         the reflexes.
       </p>
-
-      <p class="coming-soon">Coming soon to iOS and Android</p>
 
       <div class="footer-links">
         <p>
